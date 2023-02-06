@@ -26,6 +26,9 @@ public class FormatDate {
     public static String formatIso(LocalTime time) {
         if (time==null){
             return null;
+        }else if (time.getNano()==0){
+            String date="";
+            date+=time.getHour()+":"+time.getMinute()+":"+time.getSecond();
         }
         String date="";
         date+=time.getHour()+":"+time.getMinute()+":"+time.getSecond()+"."+time.getNano();
