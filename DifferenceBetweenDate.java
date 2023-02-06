@@ -18,7 +18,7 @@ public class DifferenceBetweenDate {
         if (date1==null|| date2==null)return null;
         Period period = Period.between(date1, date2);
         if (period.isNegative()){
-            period.multipliedBy(-1);
+            period.normalized();
             return period;
         }else{
             return period;
