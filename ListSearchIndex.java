@@ -16,8 +16,9 @@ public class ListSearchIndex {
             }
             if (index==-1){
                 return null;
+            }else{
+                return index;
             }
-            return index;
         }
         
     }
