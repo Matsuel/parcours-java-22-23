@@ -3,13 +3,11 @@ import java.util.List;
 
 public class ListSearchIndex {
     public static Integer findLastIndex(List<Integer> list, Integer value) {
-        if (list==null || list.isEmpty()){
-            return null;
-        }else if (value==null){
+        if (list==null || value==null || list.size()==0){
             return null;
         }else{
-            int index=-1;
-            for (int i=0;i<list.size();i++){
+            int index=-1 ;
+            for (int i=0; i<list.size();i++){
                 if (list.get(i)==value){
                     index=i;
                 }
@@ -23,17 +21,15 @@ public class ListSearchIndex {
         
     }
     public static Integer findFirstIndex(List<Integer> list, Integer value) {
-        if(list==null || list.isEmpty()){
-            return null;
-        }else if (value==null){
+        if (list==null|| value==null|| list.size()==0){
             return null;
         }else{
-            for (int i=0;i<list.size();i++){
+             for(int i =0; i<list.size();i++){
                 if (list.get(i)==value){
                     return i;
                 }
-            }
-            return null;
+             }
+             return null;
         }
         
     }
