@@ -29,10 +29,8 @@ public class ListSearchIndex {
         
     }
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
-        if (list==null){
-            return list;
-        }else if(value==null){
-            return list;
+        if (list==null || value==null || list.isEmpty()){
+            return null;
         }else{
             List<Integer> positions = new ArrayList<Integer>();
             for (int i=0; i<list.size();i++){
