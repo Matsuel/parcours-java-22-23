@@ -34,7 +34,8 @@ public class ListSearchIndex {
             return positions;
         }else{
             for (int i=0; i<list.size();i++){
-                if (list.get(i)==value){
+                int val=list.get(i);
+                if (val==value){
                     positions.add(i);
                 }
             }
