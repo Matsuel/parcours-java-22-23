@@ -29,7 +29,7 @@ public class ListSearchIndex {
                     return i;
                 }
             }
-            return 0;
+            return null;
         }
         
     }
