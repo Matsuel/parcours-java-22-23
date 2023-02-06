@@ -2,9 +2,9 @@ import java.util.List;
 
 public class ListEqual {
     public static boolean areListEquals(List<String> list1, List<String> list2) {
-        if (list1.isEmpty()&& list2.isEmpty()){
+        if (list1==null&& list2==null){
             return false;
-        }else if(list1.isEmpty()|| list2.isEmpty()){
+        }else if(list1==null|| list2==null){
             return false;
         }else{
             for (int i=0;i<list1.size();i++){
