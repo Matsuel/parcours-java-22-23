@@ -18,8 +18,9 @@ public class FormatDate {
         if (date==null){
             return null;
         }
+        String[] months={"gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosoto","settembre","ottobre","novembre","dicembre"};
         String simple="";
-        simple+=date.getMonth()+" "+date.getDayOfMonth()+" "+date.getYear()%100;
+        simple+=months[date.getMonthValue()-1]+" "+date.getDayOfMonth()+" "+date.getYear()%100;
         return simple;
     }
 
