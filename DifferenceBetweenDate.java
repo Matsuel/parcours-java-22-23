@@ -16,7 +16,11 @@ public class DifferenceBetweenDate {
     public static Period periodBetweenDate(LocalDate date1, LocalDate date2) {
         if (date1==null&& date2==null)return null;
         if (date1==null|| date2==null)return null;
-        Period period = Period.between(date1, date2).normalized();
+        Period period = Period.between(date1, date2);
+        if (period.isNegative()){
+            period.multipliedBy(-1);
+            return period;
+        }
         return period;
     }
 
