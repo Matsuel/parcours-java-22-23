@@ -24,14 +24,14 @@ public class FormatDate {
     }
 
     public static String formatIso(LocalTime time) {
+        String date="";
         if (time==null){
             return null;
         }else if (time.getNano()==0){
-            String date="";
             date+=time.getHour()+":"+time.getMinute()+":"+time.getSecond();
+        }else{
+            date+=time.getHour()+":"+time.getMinute()+":"+time.getSecond()+"."+time.getNano();
         }
-        String date="";
-        date+=time.getHour()+":"+time.getMinute()+":"+time.getSecond()+"."+time.getNano();
         return date;
     }
 
