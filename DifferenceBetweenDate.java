@@ -17,12 +17,7 @@ public class DifferenceBetweenDate {
         if (date1==null&& date2==null)return null;
         if (date1==null|| date2==null)return null;
         Period period = Period.between(date1, date2);
-        if (period.isNegative()){
-            period.normalized();
-            return period;
-        }else{
-            return period;
-        }
+        return period;
     }
 
     public static Long numberOfHoursBetweenDateTime(LocalDateTime dateTime1, LocalDateTime dateTime2) {
