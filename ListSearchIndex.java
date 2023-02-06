@@ -6,7 +6,12 @@ public class ListSearchIndex {
         if (list==null || value==null || list.isEmpty()){
             return null;
         }else{
-            return list.lastIndexOf(value);
+            int index = list.lastIndexOf(value);
+            if (index==-1){
+                return null;
+            }else{
+                return index;
+            }
         }
         
     }
@@ -14,12 +19,12 @@ public class ListSearchIndex {
         if (list==null|| value==null|| list.isEmpty()){
             return null;
         }else{
-             for(int i =0; i<list.size();i++){
-                if (list.get(i)==value){
-                    return i;
-                }
-             }
-             return null;
+            int index = list.indexOf(value);
+            if (index==-1){
+                return null;
+            }else{
+                return index;
+            }
         }
         
     }
