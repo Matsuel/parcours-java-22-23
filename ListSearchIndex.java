@@ -30,7 +30,7 @@ public class ListSearchIndex {
     }
     public static List<Integer> findAllIndexes(List<Integer> list, Integer value) {
         if (list==null || value==null || list.isEmpty()){
-            return null;
+            return list;
         }else{
             List<Integer> positions = new ArrayList<Integer>();
             for (int i=0; i<list.size();i++){
