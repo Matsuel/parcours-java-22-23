@@ -3,6 +3,7 @@ public class Palindrome {
         if (s==null){
             return false;
         }else{
+            s=s.toLowerCase();
             String re="";
             for(int i=s.length()-1; i>=0;i--){
                 re+= s.charAt(i);
