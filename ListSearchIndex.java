@@ -8,11 +8,14 @@ public class ListSearchIndex {
         }else if (value==null){
             return null;
         }else{
-            int index=0;
+            int index=-1;
             for (int i=0;i<list.size();i++){
                 if (list.get(i)==value){
                     index=i;
                 }
+            }
+            if (index==-1){
+                return null;
             }
             return index;
         }
