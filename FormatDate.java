@@ -8,7 +8,7 @@ public class FormatDate {
         if (dateTime==null){
             return null;
         }
-        String[] months={"janvier","fevrier","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","decembre"};
+        String[] months={"janvier","fevrier","mars","avril","mai","juin","juillet","août","sep.","oct.","nov.","dec."};
         String date="";
         date+= "Le "+dateTime.getDayOfMonth()+" "+months[dateTime.getMonthValue()-1]+" de l'an "+dateTime.getYear()+" à "+dateTime.getHour()+"h"+dateTime.getMinute()+"m et "+dateTime.getSecond()+"s";
         return date;
