@@ -79,11 +79,21 @@
 //     }
 // }
 
+// public class ExerciseRunner {
+//     public static void main(String[] args) {
+//         int[] array = ComputeArray.computeArray(new int[]{9, 13, 8, 23, 1, 0, 89});
+//         for (int i : array) {
+//             System.out.print(i + " ");
+//         }
+//     }
+// }
+
+import java.util.List;
+
 public class ExerciseRunner {
+
     public static void main(String[] args) {
-        int[] array = ComputeArray.computeArray(new int[]{9, 13, 8, 23, 1, 0, 89});
-        for (int i : array) {
-            System.out.print(i + " ");
-        }
+        System.out.println(ListContains.containsValue(List.of(9, 13, 8, 23, 1, 0, 89), 8));
+        System.out.println(ListContains.containsValue(List.of(9, 13, 8, 23, 1, 0, 89), 10));
     }
 }
