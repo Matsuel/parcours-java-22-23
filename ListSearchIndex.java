@@ -6,17 +6,7 @@ public class ListSearchIndex {
         if (list==null || value==null || list.size()==0){
             return null;
         }else{
-            int index=-1 ;
-            for (int i=0; i<list.size();i++){
-                if (list.get(i)==value){
-                    index=i;
-                }
-            }
-            if (index==-1){
-                return null;
-            }else{
-                return index;
-            }
+            return list.lastIndexOf(value);
         }
         
     }
