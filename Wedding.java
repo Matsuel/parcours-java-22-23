@@ -39,8 +39,8 @@ public class Wedding {
                 maxLen--;
             }
             rep.put(first_list.get(0), second_list.get(0));
-            first_list.remove(first_list.get(0));
-            second_list.remove(second_list.get(0));
+            // first_list.remove(first_list.get(0));
+            // second_list.remove(second_list.get(0));
             
         }
         return rep;
