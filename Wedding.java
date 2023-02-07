@@ -12,8 +12,6 @@ public class Wedding {
         Map<String, String> rep=new HashMap<>();
         List<String> first_list= first.stream().sorted().collect(Collectors.toList());
         List<String> second_list= second.stream().sorted().collect(Collectors.toList());
-        System.out.println(first_list);
-        System.out.println(second_list);
         int maxLen =0;
         if (first_list.size()>second_list.size()){
             maxLen=first_list.size();
