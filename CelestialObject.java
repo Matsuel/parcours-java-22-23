@@ -1,4 +1,18 @@
 public class CelestialObject {
-        public double x,y,z = 0.0;
-        public String name;
+    public double x,y,z = 0.0;
+    public String name;
+
+    public CelestialObject() {
+        this.name = "Soleil";
+        this.x = 0.0f;
+        this.y = 0.0f;
+        this.z = 0.0f;
+    }
+
+    public CelestialObject(String name, float x, float y, float z) {
+        this.name = name;
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
 }
