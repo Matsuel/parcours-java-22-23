@@ -7,8 +7,8 @@ import java.util.stream.Collectors;
 
 public class Wedding {
     public static Map<String, String> createCouple(Set<String> first, Set<String> second) {
-        if (first==null)return null;
-        if (second==null)return null;
+        // if (first==null)return null;
+        // if (second==null)return null;
         Map<String, String> rep=new HashMap<>();
         List<String> first_list= first.stream().sorted().collect(Collectors.toList());
         List<String> second_list= second.stream().sorted().collect(Collectors.toList());
