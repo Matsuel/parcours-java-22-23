@@ -1,6 +1,7 @@
 public class CelestialObject {
     public double x,y,z = 0.0;
     public String name;
+    public static double KM_IN_ONE_AU= 150000000;
 
     //Constructeur par défaut
     public CelestialObject() {
@@ -18,7 +19,7 @@ public class CelestialObject {
         this.z = z;
     }
 
-    //*getter pour x,y,z et pour name
+    //Getter pour x,y,z et pour name
     public double getX() {
         return x;
     }
@@ -33,7 +34,6 @@ public class CelestialObject {
     }
 
     //Setter pour x,y,z et name
-
     public void setX(double x){
         this.x=x;
     }
@@ -47,5 +47,15 @@ public class CelestialObject {
     public void setName(String name){
         this.name=name;
     }
+
+    //Méthode getDistanceBetween qui renvoie la distance entre 2 objets passés en paramètres
+    static double getDistanceBetween(CelestialObject c1, CelestialObject c2){
+        return Math.sqrt(Math.pow(c2.getX()-c1.getX(),2)+Math.pow(c2.getY()-c1.getY(),2)+Math.pow(c2.getZ()-c1.getZ(),2));
+    }
+    static double getDistanceBetweenInKm(CelestialObject c1, CelestialObject c2){
+        return getDistanceBetween(c1,c2)*150000000;
+    }
+
+
 }
 
