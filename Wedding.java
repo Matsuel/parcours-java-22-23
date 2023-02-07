@@ -32,12 +32,12 @@ public class Wedding {
                 second_list.remove(second_el);
                 rep.put(first_el, second_el);
                 maxLen--;                
-            }else{
-                System.out.println(first_list.size());
-                rep.put(first_list.get(0), second_list.get(0));
-                first_list.remove(first_list.get(0));
-                second_list.remove(second_list.get(0));
-            }             
+            }
+            System.out.println(first_list.size());
+            rep.put(first_list.get(0), second_list.get(0));
+            first_list.remove(first_list.get(0));
+            second_list.remove(second_list.get(0));
+            
         }
         return rep;
     }
