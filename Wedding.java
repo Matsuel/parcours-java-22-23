@@ -31,12 +31,6 @@ public class Wedding {
                 second_list.remove(second_el);
                 rep.put(first_el, second_el);
                 maxLen--;                
-            }else if (first_list.size()>1){
-                int a= rand.nextInt(maxLen);
-                String first_el= first_list.get(a);
-                rep.put(first_el, null);
-                first_list.remove(first_el);
-                maxLen--;
             }
             rep.put(first_list.get(0), second_list.get(0));
             // first_list.remove(first_list.get(0));
