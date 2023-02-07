@@ -9,7 +9,7 @@ public class CelestialObject {
         this.z = 0.0f;
     }
 
-    public CelestialObject(String name, float x, float y, float z) {
+    public CelestialObject(String name, double x, double y, double z) {
         this.name = name;
         this.x = x;
         this.y = y;
