@@ -13,7 +13,13 @@ public class Wedding {
         System.out.println(result);
         List<String> first_list= first.stream().sorted().collect(Collectors.toList());
         List<String> second_list= second.stream().sorted().collect(Collectors.toList());
-        for (int i=0; i<first_list.size();i++){
+        int maxLen =0;
+        if (first_list.size()>second_list.size()){
+            maxLen=first_list.size();
+        }else{
+            maxLen=second_list.size();
+        }
+        for (int i=0; i<maxLen;i++){
             Random rand1= new Random();
             Random rand2= new Random();
             int a= rand1.nextInt(0,first_list.size())+0;
