@@ -20,11 +20,15 @@ public class Wedding {
             maxLen=second_list.size();
         }
         for (int i=0; i<maxLen;i++){
-            Random rand1= new Random();
-            Random rand2= new Random();
-            int a= rand1.nextInt(0,first_list.size())+0;
-            int b= rand2.nextInt(0,second_list.size())+0;
+            // Random rand1= new Random();
+            // Random rand2= new Random();
+            // int a= rand1.nextInt(0,first_list.size())+0;
+            // int b= rand2.nextInt(0,second_list.size())+0;
 
+            
+            int a = (int) Math.floor(Math.random() *(first_list.size() - 0 ) + 0);
+            int b = (int) Math.floor(Math.random() *(second_list.size() - 0 ) + 0);
+            //int b = (int)Math.random()*(second_list.size()-0);
             result.putIfAbsent(first_list.get(a), second_list.get(b));
             
 
