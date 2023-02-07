@@ -172,11 +172,21 @@
 // }
 
 
+// import java.util.Set;
+
+// public class ExerciseRunner {
+
+//     public static void main(String[] args) {
+//         System.out.println(KeepTheChange.computeChange(18, Set.of(1, 3, 7)));
+//     }
+// }
+
+
 import java.util.Set;
 
 public class ExerciseRunner {
 
     public static void main(String[] args) {
-        System.out.println(KeepTheChange.computeChange(18, Set.of(1, 3, 7)));
+        System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank"), Set.of("Legolas", "Aragorn", "Gimli")));
     }
 }
