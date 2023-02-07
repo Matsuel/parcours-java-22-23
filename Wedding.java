@@ -35,7 +35,7 @@ public class Wedding {
                 first_list.remove(first_list.get(0));
                 second_list.remove(second_list.get(0));         
             }
-        }else if (first_list.size()> second_list.size()){
+        }if (first_list.size()> second_list.size()){
             int size_list= first_list.size();
             for (int i=0; i<size_list;i++){
                 if (second_list.size()>1){
@@ -59,6 +59,27 @@ public class Wedding {
                 }if (first_list.size()==1){
                     rep.put(first_list.get(0), null);
                     first_list.remove(first_list.get(0));
+                }
+            }
+        }if (first_list.size()< second_list.size()){
+            int size_list = second_list.size();
+            for (int i =0; i<size_list;i++){
+                if (first_list.size()>1){
+                    int a= rand.nextInt(first_list.size());
+                    int b= rand.nextInt(second_list.size());
+                    String first_el= first_list.get(a);
+                    String second_el= second_list.get(b);
+                    first_list.remove(first_el);
+                    second_list.remove(second_el);
+                    rep.put(first_el, second_el);  
+                }if (first_list.size()==1){
+                    if (second_list.size()==1){
+                        int a= rand.nextInt(first_list.size());
+                        String first_el= first_list.get(a);
+                        rep.put(first_el, second_list.get(0));
+                        first_list.remove(first_el);
+                        second_list.remove(second_list.get(0));
+                    }
                 }
             }
         }
