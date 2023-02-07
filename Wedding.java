@@ -35,7 +35,7 @@ public class Wedding {
                 first_list.remove(first_list.get(0));
                 second_list.remove(second_list.get(0));         
             }
-        }if (first_list.size()> second_list.size()){
+        }else if (first_list.size()> second_list.size()){
             int size_list= first_list.size();
             for (int i=0; i<size_list;i++){
                 if (second_list.size()>1){
@@ -61,7 +61,7 @@ public class Wedding {
                     first_list.remove(first_list.get(0));
                 }
             }
-        }if (first_list.size()< second_list.size()){
+        }else if (first_list.size()< second_list.size()){
             int size_list = second_list.size();
             for (int i =0; i<size_list;i++){
                 if (first_list.size()>1){
