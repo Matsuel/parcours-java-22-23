@@ -56,6 +56,15 @@ public class CelestialObject {
         return getDistanceBetween(c1,c2)*150000000;
     }
 
+    public String toString(){
+        return this.name+" is positionned at ("+this.getX()+", "+ this.getY()+", "+ this.getZ()+")";
+    }
 
+    public boolean equals(CelestialObject object){
+        if (object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.name==this.name){
+            return true;
+        }
+        return false;
+    }
 }
 
