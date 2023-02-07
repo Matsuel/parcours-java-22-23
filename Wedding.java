@@ -32,7 +32,7 @@ public class Wedding {
                 second_list.remove(second_el);
                 rep.put(first_el, second_el);
                 maxLen--;                
-            }else if (first_list.size()>=1){
+            }else if (first_list.size()>1){
                 System.out.println("cc");
                 int a= rand.nextInt(maxLen);
                 String first_el= first_list.get(a);
