@@ -188,5 +188,7 @@ public class ExerciseRunner {
 
     public static void main(String[] args) {
         System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank"), Set.of("Legolas", "Aragorn", "Gimli")));
+        System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack"), Set.of("Legolas", "Aragorn", "Gimli")));
+        System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack","erik"), Set.of("Legolas", "Aragorn", "Gimli")));
     }
 }
