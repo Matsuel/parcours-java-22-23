@@ -20,8 +20,7 @@ public class Wedding {
         }else{
             maxLen=second_list.size();
         }
-        Random rand = new Random();      
-        System.out.println(maxLen);
+        Random rand = new Random();
         for (int i=0; i<maxLen;i++){
             if (second_list.size()>1){
                 int a= rand.nextInt(maxLen);
@@ -33,14 +32,12 @@ public class Wedding {
                 rep.put(first_el, second_el);
                 maxLen--;                
             }else if (first_list.size()>1){
-                System.out.println("cc");
                 int a= rand.nextInt(maxLen);
                 String first_el= first_list.get(a);
                 rep.put(first_el, null);
                 first_list.remove(first_el);
                 maxLen--;
             }
-            System.out.println(first_list.size());
             rep.put(first_list.get(0), second_list.get(0));
             first_list.remove(first_list.get(0));
             second_list.remove(second_list.get(0));
