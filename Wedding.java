@@ -42,8 +42,8 @@ public class Wedding {
             }
             System.out.println(first_list.size());
             rep.put(first_list.get(0), second_list.get(0));
-            // first_list.remove(first_list.get(0));
-            // second_list.remove(second_list.get(0));
+            first_list.remove(first_list.get(0));
+            second_list.remove(second_list.get(0));
             
         }
         return rep;
