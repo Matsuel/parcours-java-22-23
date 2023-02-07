@@ -52,7 +52,7 @@ public class CelestialObject {
     public static double getDistanceBetween(CelestialObject c1, CelestialObject c2){
         return Math.sqrt(Math.pow(c2.getX()-c1.getX(),2)+Math.pow(c2.getY()-c1.getY(),2)+Math.pow(c2.getZ()-c1.getZ(),2));
     }
-    static double getDistanceBetweenInKm(CelestialObject c1, CelestialObject c2){
+    public static double getDistanceBetweenInKm(CelestialObject c1, CelestialObject c2){
         return getDistanceBetween(c1,c2)*150000000;
     }
 
