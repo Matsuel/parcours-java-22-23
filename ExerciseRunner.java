@@ -182,13 +182,24 @@
 // }
 
 
-import java.util.Set;
+// import java.util.Set;
+
+// public class ExerciseRunner {
+
+//     public static void main(String[] args) {
+//         System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank"), Set.of("Legolas", "Aragorn", "Gimli")));
+//         System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack"), Set.of("Legolas", "Aragorn", "Gimli")));
+//         System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack","erik"), Set.of("Legolas", "Aragorn", "Gimli")));
+//     }
+// }
 
 public class ExerciseRunner {
 
     public static void main(String[] args) {
-        System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank"), Set.of("Legolas", "Aragorn", "Gimli")));
-        System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack"), Set.of("Legolas", "Aragorn", "Gimli")));
-        System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack","erik"), Set.of("Legolas", "Aragorn", "Gimli")));
+        CelestialObject celestialObject = new CelestialObject();
+        System.out.println(celestialObject.x);
+        System.out.println(celestialObject.y);
+        System.out.println(celestialObject.z);
+        System.out.println(celestialObject.name);
     }
 }
