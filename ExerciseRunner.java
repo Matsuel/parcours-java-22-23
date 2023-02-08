@@ -260,7 +260,7 @@ public class ExerciseRunner {
     public static void main(String[] args) {
         CelestialObject celestialObject = new CelestialObject();
         CelestialObject earth = new CelestialObject("Terre", 1.0, 2.0, 2.0);
-        CelestialObject earth1 = new CelestialObject("Terre", 1.0, 2.0, 2.0);
+        CelestialObject earth1 = new CelestialObject("Terre", 1.00001, 2.0, 2.0);
 
         System.out.println(earth.toString());
         System.out.println(earth.equals(earth1));

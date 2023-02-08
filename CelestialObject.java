@@ -70,7 +70,7 @@ public class CelestialObject {
     }
 
     public int hashCode(){
-        return (int)Math.round(this.getName().hashCode()+this.getX()+this.getY()+this.getZ());
+        return (int)Math.round(this.getName().hashCode()+this.getX()*KM_IN_ONE_AU+this.getY()*KM_IN_ONE_AU+this.getZ()*KM_IN_ONE_AU);
     }
 
 }
