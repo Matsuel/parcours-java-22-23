@@ -57,7 +57,7 @@ public class CelestialObject {
     }
 
     public String toString(){
-        return this.getName()+" is positionned at ("+this.getX()+", "+ this.getY()+", "+ this.getZ()+") ";
+        return this.getName()+" is positionned at ( "+this.getX()+", "+ this.getY()+", "+ this.getZ()+")";
     }
 
     public boolean equals(CelestialObject object){
