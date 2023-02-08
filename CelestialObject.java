@@ -65,10 +65,16 @@ public class CelestialObject {
     }
 
     public boolean equals(CelestialObject object){
+        if (object==null)return false;
         if (object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.name==this.name){
             return true;
+        }else{
+            return false;
         }
-        return false;
     }
-}
 
+    public int hashCode(){
+        return (int)Math.round(this.getName().hashCode()+this.getX()*KM_IN_ONE_AU+this.getY()*KM_IN_ONE_AU+this.getZ()*KM_IN_ONE_AU);
+    }
+
+}
