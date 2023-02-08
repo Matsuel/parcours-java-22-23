@@ -24,12 +24,21 @@ public class Star extends CelestialObject{
         this.magnitude=magnitude;
     }
 
+    public boolean equals(Star object){
+        if (object==null)return false;
+        if (object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.name==this.name && object.getMagnitude()==this.getMagnitude()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     public String toString(){
         DecimalFormat val= new DecimalFormat("0.000");
         return this.getName()+" shines at the "+ val.format(this.getMagnitude())+" magnitude";
     }
 
     public int hashCode(){
-        return (int)(this.getName().hashCode()+this.getX()*KM_IN_ONE_AU+this.getY()*KM_IN_ONE_AU+this.getZ()*KM_IN_ONE_AU+this.magnitude*KM_IN_ONE_AU);
+        return (int)(this.getName().hashCode()*(this.magnitude)+this.getY()*this.magnitude+this.getX()*this.magnitude+this.getZ()*this.magnitude);
     }
 }
