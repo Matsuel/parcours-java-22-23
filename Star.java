@@ -13,7 +13,7 @@ public class Star extends CelestialObject{
 
     public Star(){
         this.magnitude=0.0f;
-        CelestialObject Star= new CelestialObject();
+        new CelestialObject();
     }
 
     public Star(String name, double x, double y, double z, double magnitude) {
@@ -26,7 +26,7 @@ public class Star extends CelestialObject{
 
     public String toString(){
         DecimalFormat val= new DecimalFormat("0.000");
-        return this.getName()+" is shines at the "+ val.format(this.getMagnitude())+" magnitude";
+        return this.getName()+" shines at the "+ val.format(this.getMagnitude())+" magnitude";
     }
 
     public int hashCode(){

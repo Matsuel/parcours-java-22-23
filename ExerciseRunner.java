@@ -193,17 +193,17 @@
 //     }
 // }
 
-import java.util.List;
-import java.util.Map;
+// import java.util.List;
+// import java.util.Map;
 
-public class ExerciseRunner {
+// public class ExerciseRunner {
 
-    public static void main(String[] args) {
-        System.out.println(WeddingComplex.createBestCouple(
-                Map.of("Naruto", List.of("Sakura", "Hinata"), "Sasuke", List.of("Sakura", "Hinata")),
-                Map.of("Sakura", List.of("Sasuke", "Naruto"), "Hinata", List.of("Naruto", "Sasuke"))));
-    }
-}
+//     public static void main(String[] args) {
+//         System.out.println(WeddingComplex.createBestCouple(
+//                 Map.of("Naruto", List.of("Sakura", "Hinata"), "Sasuke", List.of("Sakura", "Hinata")),
+//                 Map.of("Sakura", List.of("Sasuke", "Naruto"), "Hinata", List.of("Naruto", "Sasuke"))));
+//     }
+// }
 
 // public class ExerciseRunner {
 
@@ -300,20 +300,20 @@ public class ExerciseRunner {
 // }
 
 
-// public class ExerciseRunner {
+public class ExerciseRunner {
 
-//     public static void main(String[] args) {
-//         Star star = new Star();
-//         Star star2 = new Star();
-//         Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
-//         Star proxima2 = new Star("Proxima2", 18.389, 832.32, 218, 110.41);
+    public static void main(String[] args) {
+        Star star = new Star();
+        Star star2 = new Star();
+        Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
+        Star proxima2 = new Star("Proxima2", 18.389, 832.32, 218.01, 0.4);
         
-//         System.out.println(star.toString());
-//         System.out.println(proxima.toString());
-//         System.out.println(proxima2.toString());
-//         System.out.println(star.equals(star2));
-//         System.out.println(star.equals(proxima));
-//         System.out.println(proxima2.hashCode());
-//         System.out.println(proxima.hashCode());
-//     }
-// }
+        System.out.println(star.toString());
+        System.out.println(proxima.toString());
+        System.out.println(proxima2.toString());
+        System.out.println(star.equals(star2));
+        System.out.println(star.equals(proxima));
+        System.out.println(proxima2.hashCode());
+        System.out.println(proxima.hashCode());
+    }
+}
