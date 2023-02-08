@@ -182,16 +182,16 @@
 // }
 
 
-// import java.util.Set;
+import java.util.Set;
 
-// public class ExerciseRunner {
+public class ExerciseRunner {
 
-//     public static void main(String[] args) {
-//         System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank"), Set.of("Legolas", "Aragorn", "Gimli")));
-//         System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack"), Set.of("Legolas", "Aragorn", "Gimli")));
-//         System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack","erik"), Set.of("Legolas", "Aragorn", "Gimli")));
-//     }
-// }
+    public static void main(String[] args) {
+        System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank"), Set.of("Legolas", "Aragorn", "Gimli")));
+        System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack"), Set.of("Legolas", "Aragorn", "Gimli")));
+        System.out.println(Wedding.createCouple(Set.of("Pikachu", "Dracaufeu", "Tortank","jack","erik"), Set.of("Legolas", "Aragorn", "Gimli")));
+    }
+}
 
 // public class ExerciseRunner {
 
@@ -288,16 +288,20 @@
 // }
 
 
-public class ExerciseRunner {
+// public class ExerciseRunner {
 
-    public static void main(String[] args) {
-        Star star = new Star();
-        Star star2 = new Star();
-        Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
+//     public static void main(String[] args) {
+//         Star star = new Star();
+//         Star star2 = new Star();
+//         Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
+//         Star proxima2 = new Star("Proxima2", 18.389, 832.32, 218, 110.41);
         
-        System.out.println(star.toString());
-        System.out.println(proxima.toString());
-        System.out.println(star.equals(star2));
-        System.out.println(star.equals(proxima));
-    }
-}
+//         System.out.println(star.toString());
+//         System.out.println(proxima.toString());
+//         System.out.println(proxima2.toString());
+//         System.out.println(star.equals(star2));
+//         System.out.println(star.equals(proxima));
+//         System.out.println(proxima2.hashCode());
+//         System.out.println(proxima.hashCode());
+//     }
+// }
