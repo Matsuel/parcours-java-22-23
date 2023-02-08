@@ -28,4 +28,8 @@ public class Star extends CelestialObject{
         DecimalFormat val= new DecimalFormat("0.000");
         return this.getName()+" is shines at the "+ val.format(this.getMagnitude())+" magnitude";
     }
+
+    public int hashCode(){
+        return (int)Math.round(this.getName().hashCode()+this.getX()*this.magnitude+this.getY()*this.magnitude+this.getZ()*this.magnitude);
+    }
 }
