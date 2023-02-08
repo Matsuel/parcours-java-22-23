@@ -1,3 +1,5 @@
+import java.text.DecimalFormat;
+
 public class CelestialObject {
     public double x,y,z = 0.0;
     public String name;
@@ -57,7 +59,9 @@ public class CelestialObject {
     }
 
     public String toString(){
-        return this.name+" is positionned at ("+this.getX()+", "+ this.getY()+", "+ this.getZ()+")";
+        DecimalFormat val= new DecimalFormat(".000");
+        return this.getName()+" is positionned at ("+val.format(this.getX())+", "+val.format(this.getY())+", "+val.format(this.getZ())+")";
+        // return this.name+" is positionned at ("+this.getX()+", "+ this.getY()+", "+ this.getZ()+")";
     }
 
     public boolean equals(CelestialObject object){
