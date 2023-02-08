@@ -64,8 +64,9 @@ public class CelestialObject {
         if (object==null)return false;
         if (object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.name==this.name){
             return true;
+        }else{
+            return false;
         }
-        return false;
     }
 
     public int hashCode(){
