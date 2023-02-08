@@ -30,6 +30,6 @@ public class Star extends CelestialObject{
     }
 
     public int hashCode(){
-        return (int)Math.round(this.getName().hashCode()+this.getX()*this.magnitude*KM_IN_ONE_AU+this.getY()*this.magnitude*KM_IN_ONE_AU+this.getZ()*this.magnitude*KM_IN_ONE_AU);
+        return (int)Math.round((this.getName().hashCode()+this.getX()*this.getMagnitude()+this.getY()*this.getMagnitude()+this.getZ()*this.getMagnitude())*KM_IN_ONE_AU);
     }
 }
