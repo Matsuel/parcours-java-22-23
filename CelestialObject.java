@@ -60,7 +60,7 @@ public class CelestialObject {
 
     public String toString(){
         DecimalFormat val= new DecimalFormat(".000");
-        return this.getName()+" is positionned at ("+val.format(this.getX())+", "+val.format(this.getY())+", "+val.format(this.getZ())+")";
+        return this.getName()+" is positioned at ("+val.format(this.getX())+", "+val.format(this.getY())+", "+val.format(this.getZ())+")";
         // return this.name+" is positionned at ("+this.getX()+", "+ this.getY()+", "+ this.getZ()+")";
     }
 
