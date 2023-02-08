@@ -66,5 +66,9 @@ public class CelestialObject {
         }
         return false;
     }
+
+    public int hashCode(){
+        return (int)(this.getX()+this.getY()+this.getZ()+this.getName().hashCode());
+    }
 }
 
