@@ -21,13 +21,28 @@ public class Sorcerer extends Character implements Healer {
         }
     }
 
-    @Override 
-    public String toString(){
-        if (this.getCurrentHealth()==0)return this.getName()+" is a dead sorcerer. So bad, it could heal "+this.getHealCapacity()+" HP.";
-        if (this.getWeapon()!=null){
-            return "He has the weapon "+this.getWeapon().toString();
-        }else{
-            return this.getName()+" is a sorcerer with "+this.getCurrentHealth()+" HP. It can heal "+this.getHealCapacity()+" HP.";
+    // @Override 
+    // public String toString(){
+    //     if (this.getCurrentHealth()==0)return this.getName()+" is a dead sorcerer. So bad, it could heal "+this.getHealCapacity()+" HP.";
+    //     if (this.getWeapon()!=null){
+    //         return "He has the weapon "+this.getWeapon().toString();
+    //     }else{
+    //         return this.getName()+" is a sorcerer with "+this.getCurrentHealth()+" HP. It can heal "+this.getHealCapacity()+" HP.";
+    //     }
+    // }
+
+    @Override
+    public String toString() {
+        if(this.getWeapon()!=null && this.getCurrentHealth()==0){
+            return this.getName()+" is a sorcerer and is dead. He has a weapon "+this.getWeapon().toString();
+        }else if (this.getCurrentHealth()==0 && this.getWeapon()==null){
+            return this.getName()+" is a sorcerer and is dead";
+        
+        }else if (this.getWeapon()!=null && this.getCurrentHealth()!=0){
+            return this.getName()+ " is a sorcerer with "+this.getCurrentHealth()+" HP. It can heal "+this.getHealCapacity()+" HP. He has the weapon "+this.getWeapon().toString();
+        } 
+        else{
+            return this.getName()+ " is a sorcerer with "+this.getCurrentHealth()+" HP";
         }
     }
 
