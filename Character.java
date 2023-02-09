@@ -49,12 +49,13 @@ public class Character {
     public static String printStatus(){
         String rep="------------------------------------------\n";
         if (allCharacters!=null){
+            rep+="Characters currently fighting :\n";
             for (Character ch : allCharacters){
                 rep+=" - "+ch.toString()+"\n";
             }
             rep+="------------------------------------------";
         }else{
-            rep="------------------------------------------ \nNobody's fighting right now !\n------------------------------------------";
+            rep="Nobody's fighting right now !\n------------------------------------------";
         }
         
         return rep;
