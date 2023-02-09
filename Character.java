@@ -59,7 +59,7 @@ public class Character {
     }
 
     public static String fight(Character ch1, Character ch2){
-        while( ch1.getCurrentHealth()>=0 || ch2.getCurrentHealth()>=0){
+        while( ch1.getCurrentHealth()>=0 && ch2.getCurrentHealth()>=0){
             ch1.attack(ch2);
             ch2.attack(ch1);
         }
