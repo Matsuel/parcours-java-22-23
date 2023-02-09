@@ -3,7 +3,7 @@ import java.util.List;
 
 public class Character {
     private final int maxHealth ;
-    private int currentHealth;
+    int currentHealth;
     private final String name;
     private static List<Character> allCharacters= new ArrayList<Character>();
 
@@ -26,6 +26,7 @@ public class Character {
         return name;
     }
 
+    @Override
     public String toString(){
         if (this.currentHealth>0){
         return this.getName()+" : "+this.getCurrentHealth()+"/"+this.getMaxHealth();
