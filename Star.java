@@ -28,7 +28,7 @@ public class Star extends CelestialObject{
     public boolean equals(Star object){
         if (object==null)return false;
         if ((this instanceof Star) && (object instanceof Star)){
-            return object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.name==this.name && object.getMagnitude()==this.getMagnitude();
+            return object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.getName()==this.getName() && object.getMagnitude()==this.getMagnitude();
         }
         return false;
         // if (object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.name==this.name && object.getMagnitude()==this.getMagnitude()){

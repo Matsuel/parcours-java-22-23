@@ -315,6 +315,7 @@ public class ExerciseRunner {
         System.out.println(proxima2.toString());
         System.out.println(star.equals(star2));
         System.out.println(star.equals(proxima));
+        System.out.println(proxima.equals(kk));
         System.out.println(proxima2.hashCode());
         System.out.println(proxima3.hashCode());
         System.out.println(kk.hashCode());
