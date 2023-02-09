@@ -306,8 +306,8 @@ public class ExerciseRunner {
         Star star = new Star();
         Star star2 = new Star();
         Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
-        Star proxima2 = new Star("Proxima", 18.389, 832.32, 218, 0.39);
-        CelestialObject kk = new CelestialObject("kk", 1.0, 2.0, 2.0);
+        Star proxima2 = new Star("Proxima", 18.388, 832.32, 218, 0.4);
+        CelestialObject kk = new CelestialObject("Proxima", 18.388, 832.32, 218);
         
         System.out.println(star.toString());
         System.out.println(proxima.toString());
