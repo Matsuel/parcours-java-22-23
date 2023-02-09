@@ -29,8 +29,8 @@ public class Templar extends Character implements Tank, Healer {
     @Override
     public String toString(){
         if (this.getCurrentHealth()==0)return this.getName()+ " has been beaten, even with its "+this.getShield()+" shield. So bad, it could heal "+this.getHealCapacity()+ " HP.";
-        if (this.weapon!=null){
-            return "He has the weapon "+this.weapon.toString();
+        if (this.getWeapon()!=null){
+            return "He has the weapon "+this.getWeapon().toString();
         }else{
             return this.getName()+" is a strong Templar with "+this.getCurrentHealth()+" HP. It can heal "+this.getHealCapacity()+" HP and has a shield of "+this.shield+".";
         }
@@ -47,8 +47,8 @@ public class Templar extends Character implements Tank, Healer {
 
     public void attack(Character ch){
         this.heal(this);
-        if (this.weapon!=null){
-            ch.takeDamage(this.weapon.getDamage());
+        if (this.getWeapon()!=null){
+            ch.takeDamage(this.getWeapon().getDamage());
         }else{
             ch.takeDamage(6);
         }

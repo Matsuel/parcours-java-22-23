@@ -6,7 +6,7 @@ public abstract class Character {
     protected int currentHealth;
     private final String name;
     private static List<Character> allCharacters= new ArrayList<Character>();
-    public  Weapon weapon;
+    private  Weapon weapon;
 
     public Character(String name, int maxHealt, Weapon weapon){
         this.currentHealth=maxHealt;
@@ -14,6 +14,10 @@ public abstract class Character {
         this.name=name;
         this.weapon=weapon;
         Character.allCharacters.add(this);
+    }
+
+    public Weapon getWeapon(){
+        return this.weapon;
     }
  
     public int getMaxHealth(){
