@@ -6,7 +6,7 @@ public class Monster extends Character {
 
     public String toString() {
         if (this.getMaxHealth()==0)return this.getName()+" is a monster and is dead";
-        return this.getName()+ " is a monster with "+this.getMaxHealth()+" HP";
+        return this.getName()+ " is a monster with "+this.getCurrentHealth()+" HP";
     }
     
 }
