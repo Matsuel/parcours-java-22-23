@@ -307,6 +307,7 @@ public class ExerciseRunner {
         Star star2 = new Star();
         Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
         Star proxima2 = new Star("Proxima", 18.389, 832.32, 218, 0.39);
+        CelestialObject kk = new CelestialObject("kk", 1.0, 2.0, 2.0);
         
         System.out.println(star.toString());
         System.out.println(proxima.toString());
@@ -314,6 +315,7 @@ public class ExerciseRunner {
         System.out.println(star.equals(star2));
         System.out.println(star.equals(proxima));
         System.out.println(proxima2.hashCode());
+        System.out.println(kk.hashCode());
         System.out.println(proxima.hashCode());
     }
 }
