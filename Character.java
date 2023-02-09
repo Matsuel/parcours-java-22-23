@@ -55,7 +55,7 @@ public class Character {
             }
             rep+="------------------------------------------";
         }else{
-            rep="Nobody's fighting right now !\n------------------------------------------";
+            rep+="Nobody's fighting right now !\n------------------------------------------";
         }
         
         return rep;
