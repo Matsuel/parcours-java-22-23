@@ -17,6 +17,6 @@ public class Weapon {
 
     @Override
     public String toString() {
-        return this.name + " deals " + this.damage + " damages.";
+        return this.name + " deals " + this.damage + " damages";
     }
 }
