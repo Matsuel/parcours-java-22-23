@@ -9,7 +9,7 @@ public class Character {
         this.name=name;
     }
  
-    public int getmaxHealth(){
+    public int getMaxHealth(){
         return maxHealth;
     }
  
@@ -23,7 +23,7 @@ public class Character {
 
     public String toString(){
         if (this.currentHealth>0){
-        return this.getName()+" : "+this.getCurrentHealth()+"/"+this.getmaxHealth();
+        return this.getName()+" : "+this.getCurrentHealth()+"/"+this.getMaxHealth();
         }else{
             return this.getName()+" : KO";
         }
