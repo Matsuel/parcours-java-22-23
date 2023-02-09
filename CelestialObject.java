@@ -65,10 +65,13 @@ public class CelestialObject {
     }
 
 
-    public boolean equals(final CelestialObject object){
+    @Override
+    public boolean equals(Object object){
         if (object==null)return false;
+        if(object==this)return true;
         if ((this instanceof CelestialObject) && (object instanceof CelestialObject)){
-            return object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.getName()==this.getName();
+            CelestialObject obj = (CelestialObject) object;
+            return obj.getX()==this.getX() && obj.getY()==this.getY() && obj.getZ()==this.getZ() && obj.getName()==this.getName();
         }
         return false;
 
