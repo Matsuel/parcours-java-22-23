@@ -1,15 +1,17 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Character {
     private final int maxHealth ;
     private int currentHealth;
     private final String name;
-    private static List<Character> allCharacters;
+    private static List<Character> allCharacters= new ArrayList<Character>();
 
     public Character(String name, int maxHealt){
         this.currentHealth=maxHealt;
         this.maxHealth=maxHealt;
         this.name=name;
+        Character.allCharacters.add(this);
     }
  
     public int getMaxHealth(){
@@ -45,7 +47,7 @@ public class Character {
     }
 
     public static String printStatus(){
-        String rep="------------------------------------------";
+        String rep="------------------------------------------\n";
         if (allCharacters!=null){
             for (Character ch : allCharacters){
                 rep+="- "+ch.toString()+"\n";
