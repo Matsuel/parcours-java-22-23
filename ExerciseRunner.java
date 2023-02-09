@@ -300,27 +300,47 @@
 // }
 
 
+// public class ExerciseRunner {
+
+//     public static void main(String[] args) {
+//         Star star = new Star();
+//         Star star2 = new Star();
+//         Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
+//         Star proxima2 = new Star("Proxima", 18.388, 832.32, 218, 0.4);
+//         Star proxima3 = new Star("Proxima", 18.388, 832.32, 218, 0);
+//         CelestialObject kk = new CelestialObject("Proxima", 18.388, 832.32, 218);
+        
+//         System.out.println(star.toString());
+//         System.out.println(proxima.toString());
+//         System.out.println(proxima2.toString());
+//         System.out.println(star.equals(star2));
+//         System.out.println(star.equals(proxima));
+//         System.out.println(proxima.equals(star));
+//         System.out.println(proxima.equals(kk));
+//         System.out.println(kk.equals(proxima));
+//         System.out.println(proxima2.hashCode());
+//         System.out.println(proxima3.hashCode());
+//         System.out.println(kk.hashCode());
+//         System.out.println(proxima.hashCode());
+//     }
+// }
+
+
 public class ExerciseRunner {
 
     public static void main(String[] args) {
-        Star star = new Star();
-        Star star2 = new Star();
-        Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
-        Star proxima2 = new Star("Proxima", 18.388, 832.32, 218, 0.4);
-        Star proxima3 = new Star("Proxima", 18.388, 832.32, 218, 0);
-        CelestialObject kk = new CelestialObject("Proxima", 18.388, 832.32, 218);
+        Character aragorn = new Character("Aragorn", 20);
+        Character uruk = new Character("Uruk", 5);
         
-        System.out.println(star.toString());
-        System.out.println(proxima.toString());
-        System.out.println(proxima2.toString());
-        System.out.println(star.equals(star2));
-        System.out.println(star.equals(proxima));
-        System.out.println(proxima.equals(star));
-        System.out.println(proxima.equals(kk));
-        System.out.println(kk.equals(proxima));
-        System.out.println(proxima2.hashCode());
-        System.out.println(proxima3.hashCode());
-        System.out.println(kk.hashCode());
-        System.out.println(proxima.hashCode());
+        System.out.println(aragorn.toString());
+        System.out.println(uruk.toString());
+        
+        aragorn.attack(uruk);
+
+        System.out.println(uruk.toString());
+        
+        aragorn.takeDamage(12);
+
+        System.out.println(aragorn.toString());
     }
 }

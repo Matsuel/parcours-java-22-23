@@ -27,11 +27,10 @@ public class Star extends CelestialObject{
 
     public boolean equals(final Star object){
         if (object==null)return false;
-        return object.hashCode()== this.hashCode();
-        // if ((this instanceof Star) && (object instanceof Star)){
-        //     return object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.getName()==this.getName() && object.getMagnitude()==this.getMagnitude();
-        // }
-        // return false;
+        if ((this instanceof Star) && (object instanceof Star)){
+            return object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.getName()==this.getName() && object.getMagnitude()==this.getMagnitude();
+        }
+        return false;
         // if (object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.name==this.name && object.getMagnitude()==this.getMagnitude()){
         //     return true;
         // }else{
@@ -46,8 +45,6 @@ public class Star extends CelestialObject{
 
     @Override 
     public int hashCode(){
-        //condition pour que l'bjet ne soit pas un celestielObject
-        //return (int) super.hashCode()+(int) (this.getMagnitude()*KM_IN_ONE_AU);
         return (int)(Objects.hash(this.getName(), this.getX(), this.getY(), this.getZ(), this.getMagnitude(),KM_IN_ONE_AU));
     }
 }
