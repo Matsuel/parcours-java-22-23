@@ -67,7 +67,7 @@ public class CelestialObject {
 
     @Override
     public boolean equals(Object object){
-        if (object==null)return false;
+        if (object==null || getClass() != object.getClass())return false;
         if(object==this)return true;
         if ((this instanceof CelestialObject) && (object instanceof CelestialObject)){
             CelestialObject obj = (CelestialObject) object;
