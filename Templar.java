@@ -15,8 +15,11 @@ public class Templar extends Character implements Tank, Healer {
 
     @Override
     public void heal(Character ch){
-        if (ch.getCurrentHealth()+this.healCapacity>ch.getMaxHealth())ch.currentHealth=ch.getMaxHealth();
-        ch.currentHealth=this.healCapacity+ch.currentHealth;
+        if (ch.getCurrentHealth()+this.healCapacity>ch.getMaxHealth()){
+            ch.currentHealth=ch.getMaxHealth();
+        }else{
+            ch.currentHealth=this.healCapacity+ch.currentHealth;
+        }
     }
 
     public int getShield(){
