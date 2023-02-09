@@ -43,7 +43,7 @@ public class Star extends CelestialObject{
         return this.getName()+" shines at the "+ val.format(this.getMagnitude())+" magnitude";
     }
 
-    @Override 
+     
     public int hashCode(){
         //condition pour que l'bjet ne soit pas un celestielObject
         //return (int) super.hashCode()+(int) (this.getMagnitude()*KM_IN_ONE_AU);
