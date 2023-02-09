@@ -2,7 +2,7 @@ public class Weapon {
     private String name;
     private int damage;
 
-    Weapon(String name, int damage) {
+    public Weapon(String name, int damage) {
         this.name = name;
         this.damage = damage;
     }
