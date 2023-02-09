@@ -46,6 +46,7 @@ public class Sorcerer extends Character implements Healer {
         }
     }
 
+    @Override
     public void takeDamage(int n){
         if (currentHealth-n<=0){
             currentHealth=0;
@@ -54,6 +55,7 @@ public class Sorcerer extends Character implements Healer {
         }
     }
 
+    @Override
     public void attack(Character ch){
         this.heal(this);
         if (this.getWeapon()!=null){

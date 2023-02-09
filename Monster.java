@@ -16,6 +16,7 @@ public class Monster extends Character {
         }
     }
     
+    @Override
     public void takeDamage(int n){
         double damages_double= n*0.8;
         int damages=(int)damages_double;
@@ -26,6 +27,7 @@ public class Monster extends Character {
         }
     }
 
+    @Override
     public void attack(Character ch){
         if (this.getWeapon()==null){
             ch.takeDamage(6);
