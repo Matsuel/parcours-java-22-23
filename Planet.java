@@ -12,7 +12,7 @@ public class Planet extends CelestialObject {
         this.x=x;
         this.y=y;
         this.z=z;
-        this.centerStar= new Star(name, centerStar.getX(), centerStar.getY(), centerStar.getZ(),centerStar.getMagnitude()); 
+        this.centerStar= new Star(centerStar.getName(), centerStar.getX(), centerStar.getY(), centerStar.getZ(),centerStar.getMagnitude()); 
     }
 
     public Star getCenterStar(){
