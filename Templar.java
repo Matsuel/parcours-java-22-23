@@ -43,6 +43,6 @@ public class Templar extends Character implements Tank, Healer {
 
     public void attack(Character ch){
         this.heal(this);
-        ch.takeDamage(6);
+        ch.takeDamage(6-this.getHealCapacity());
     }
 }
