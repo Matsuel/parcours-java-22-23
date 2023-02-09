@@ -369,9 +369,9 @@ public class ExerciseRunner {
 
         System.out.println(Character.printStatus());
 
-        //Character winner = Character.fight(aragorn, uruk);
+        Character winner = Character.fight(aragorn, uruk);
 
-        //System.out.println(winner.toString());
+        System.out.println(winner.toString());
         System.out.println(Character.printStatus());
     }
 }

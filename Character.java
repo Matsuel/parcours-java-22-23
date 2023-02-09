@@ -58,16 +58,14 @@ public class Character {
         return rep;
     }
 
-    public static String fight(Character ch1, Character ch2){
+    public static Character fight(Character ch1, Character ch2){
         while( ch1.getCurrentHealth()>=0 && ch2.getCurrentHealth()>=0){
             ch1.attack(ch2);
+            if (ch2.getCurrentHealth()==0)return ch1;
             ch2.attack(ch1);
+            if(ch1.getCurrentHealth()==0)return ch2;
         }
-        if (ch1.getCurrentHealth()==0){
-            return ch2.toString();
-        }
-        else{
-            return ch1.toString();
-        }
+        if (ch1.getCurrentHealth()==0)return ch2;
+        return ch1;
     }
 }
