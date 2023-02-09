@@ -326,17 +326,17 @@
 // }
 
 
-public class ExerciseRunner {
+// public class ExerciseRunner {
 
-    public static void main(String[] args) {
-        Planet earth = new Planet();
-        Planet naboo = new Planet("Naboo", 17.4389, 8349.1, 8943.92, new Star("Betelgeuse", 128.23, -12.82, 32.328, 1289.3));
+//     public static void main(String[] args) {
+//         Planet earth = new Planet();
+//         Planet naboo = new Planet("Naboo", 17.4389, 8349.1, 8943.92, new Star("Betelgeuse", 128.23, -12.82, 32.328, 1289.3));
 
-        System.out.println(naboo.toString());
-        System.out.println(earth.toString());
-        System.out.println(naboo.getCenterStar().toString());
-    }
-}
+//         System.out.println(naboo.toString());
+//         System.out.println(earth.toString());
+//         System.out.println(naboo.getCenterStar().toString());
+//     }
+// }
 
 
 // public class ExerciseRunner {
@@ -357,3 +357,21 @@ public class ExerciseRunner {
 //         System.out.println(aragorn.toString());
 //     }
 // }
+
+
+public class ExerciseRunner {
+
+    public static void main(String[] args) {
+        System.out.println(Character.printStatus());
+
+        Character aragorn = new Character("Aragorn", 20);
+        Character uruk = new Character("Uruk", 15);
+
+        System.out.println(Character.printStatus());
+
+        //Character winner = Character.fight(aragorn, uruk);
+
+        //System.out.println(winner.toString());
+        System.out.println(Character.printStatus());
+    }
+}
