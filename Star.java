@@ -1,4 +1,5 @@
 import java.text.DecimalFormat;
+import java.util.Objects;
 
 public class Star extends CelestialObject{
     private double magnitude=0.0;
@@ -38,7 +39,9 @@ public class Star extends CelestialObject{
         return this.getName()+" shines at the "+ val.format(this.getMagnitude())+" magnitude";
     }
 
+    @Override 
     public int hashCode(){
-        return (int) super.hashCode()*(int) (this.getMagnitude()*KM_IN_ONE_AU);
+        //return (int) super.hashCode()+(int) (this.getMagnitude()*KM_IN_ONE_AU);
+        return (int)(Objects.hash(this.getName(), this.getX(), this.getY(), this.getZ(), this.getMagnitude()));
     }
 }
