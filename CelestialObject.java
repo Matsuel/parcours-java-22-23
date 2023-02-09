@@ -65,7 +65,7 @@ public class CelestialObject {
     }
 
 
-    public boolean equals(CelestialObject object){
+    public boolean equals(final CelestialObject object){
         if (object==null)return false;
         if ((this instanceof CelestialObject) && (object instanceof CelestialObject)){
             return object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.getName()==this.getName();
