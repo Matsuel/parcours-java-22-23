@@ -64,6 +64,7 @@ public class CelestialObject {
         // return this.name+" is positionned at ("+this.getX()+", "+ this.getY()+", "+ this.getZ()+")";
     }
 
+
     public boolean equals(CelestialObject object){
         if (object==null)return false;
         if (object.getX()==this.getX() && object.getY()==this.getY() && object.getZ()==this.getZ() && object.name==this.name){
