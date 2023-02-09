@@ -48,10 +48,10 @@ public class Character {
 
     public static String printStatus(){
         String rep="------------------------------------------\n";
-        if (allCharacters.size()!=0){
+        if (allCharacters.size()>0){
             rep+="Characters currently fighting :\n";
-            for (Character ch : allCharacters){
-                rep+=" - "+ch.toString()+"\n";
+            for (int i=0; i<allCharacters.size();i++){
+                rep+=" - "+allCharacters.get(i).toString()+"\n";
             }
             rep+="------------------------------------------";
         }else{
