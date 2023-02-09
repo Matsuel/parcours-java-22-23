@@ -306,7 +306,7 @@ public class ExerciseRunner {
         Star star = new Star();
         Star star2 = new Star();
         Star proxima = new Star("Proxima", 18.389, 832.32, 218, 0.4);
-        Star proxima2 = new Star("Proxima2", 18.389, 832.32, 218.0001, 0.4);
+        Star proxima2 = new Star("Proxima", 18.390, 832.32, 218, 0.4);
         
         System.out.println(star.toString());
         System.out.println(proxima.toString());
