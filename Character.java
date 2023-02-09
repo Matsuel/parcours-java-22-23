@@ -50,7 +50,7 @@ public class Character {
         String rep="------------------------------------------\n";
         if (allCharacters!=null){
             for (Character ch : allCharacters){
-                rep+="- "+ch.toString()+"\n";
+                rep+=" - "+ch.toString()+"\n";
             }
             rep+="------------------------------------------";
         }else{
