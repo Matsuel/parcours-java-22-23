@@ -8,10 +8,12 @@ public class Templar extends Character implements Tank, Healer {
         this.shield=shield;
     }
 
+    @Override
     public int getHealCapacity(){
         return this.healCapacity;
     }
 
+    @Override
     public void heal(Character ch){
         ch.currentHealth+= this.healCapacity;
     }
