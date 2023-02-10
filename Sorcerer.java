@@ -46,15 +46,34 @@ public class Sorcerer extends Character implements Healer {
         }
     }
 
+    // @Override
+    // public void takeDamage(int n) throws DeadCharacterException{
+    //     if(this.getCurrentHealth()==0)throw new DeadCharacterException(this);
+    //     if (currentHealth-n<=0){
+    //         currentHealth=0;
+    //         if(this.currentHealth==0)throw new DeadCharacterException(this);
+    //     }else{
+    //         currentHealth-=n;
+    //     }
+    // }
+
     @Override
     public void takeDamage(int n) throws DeadCharacterException{
-        if(this.getCurrentHealth()==0)throw new DeadCharacterException(this);
-        if (currentHealth-n<=0){
+        double damages_double= n*0.8;
+        int damages=(int)damages_double;
+        if (this.getCurrentHealth()==getMaxHealth()){
+            if (currentHealth-damages<=0){
+                currentHealth=0;
+            }else{
+                currentHealth-=damages;
+            }
+        }if (currentHealth-damages<=0){
             currentHealth=0;
-            if(this.currentHealth==0)throw new DeadCharacterException(this);
         }else{
-            currentHealth-=n;
+            currentHealth-=damages;
         }
+        if (this.getCurrentHealth()==0)throw new DeadCharacterException(this);
+        
     }
 
     @Override
