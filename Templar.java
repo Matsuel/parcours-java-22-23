@@ -58,10 +58,8 @@ public class Templar extends Character implements Tank, Healer {
         if(this.getCurrentHealth()==0)throw new DeadCharacterException(this);
         if (currentHealth-n<=0){
             currentHealth=0;
-            if(this.currentHealth==0)throw new DeadCharacterException(this);
         }else{
             currentHealth-=n-this.shield;
-            if(this.currentHealth==0)throw new DeadCharacterException(this);
         }
     }
 
