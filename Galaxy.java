@@ -19,29 +19,31 @@ public class Galaxy {
         celestialObjects.add(celestialObject);
     }
 
-    //créer une méthode computeMassRepartition qui retourne un Map<String, Int> qui contient le nom de la classe et la masse totale de tous les objets de cette classe dans l'ordre décroissant de masse les noms 
     public Map<String, Integer> computeMassRepartition(){
-        Map<String, Integer> massRepartition = new HashMap<String, Integer>();
-        for (CelestialObject celestialObject : celestialObjects) {
-            String className = celestialObject.getClass().getSimpleName();
-            if (massRepartition.containsKey(className)) {
-                if (className.equals("Planet")|| className.equals("Star")) {
-                    massRepartition.put(className, massRepartition.get(className) + celestialObject.getMass());
+        Map <String, Integer> rep= new HashMap<String, Integer>();
+        for (CelestialObject object: this.celestialObjects){
+            if (object instanceof Star){
+                if (rep.containsKey("Star")){
+                    rep.put("Star", rep.get("Star")+object.getMass());
                 }else{
-                    massRepartition.put("Other", massRepartition.get(className) + celestialObject.getMass());
+                    rep.put("Star", object.getMass());
                 }
-                
-            } else {
-                if (className.equals("Planet")|| className.equals("Star")) {
-                    massRepartition.put(className, celestialObject.getMass());
+            }else if (object instanceof Planet){
+                if (rep.containsKey("Planet")){
+                    rep.put("Planet", rep.get("Planet")+object.getMass());
                 }else{
-                    massRepartition.put("Other", celestialObject.getMass());
+                    rep.put("Planet", object.getMass());
                 }
-                //massRepartition.put(className, celestialObject.getMass());
+            }else{
+                if (rep.containsKey("Other")){
+                    rep.put("Other", rep.get("Other")+object.getMass());
+                }else{
+                    rep.put("Other", object.getMass());
+                }
             }
         }
-        
-        return massRepartition;
+        return rep;
     }
+
 
 }
