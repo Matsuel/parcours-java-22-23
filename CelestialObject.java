@@ -4,6 +4,15 @@ public class CelestialObject {
     public double x,y,z = 0.0;
     public String name;
     public static double KM_IN_ONE_AU= 150000000;
+    private int mass;
+
+    public int getMass() {
+        return mass;
+    }
+
+    public void setMass(int mass) {
+        this.mass = mass;
+    }
 
     //Constructeur par défaut
     public CelestialObject() {
@@ -14,8 +23,9 @@ public class CelestialObject {
     }
 
     //Constructeur qui prend en paramètre le nom de l'objet et ses coordonnées x,y,z
-    public CelestialObject(String name, double x, double y, double z) {
+    public CelestialObject(String name, double x, double y, double z,int mass) {
         this.name = name;
+        this.mass=mass;
         this.x = x;
         this.y = y;
         this.z = z;

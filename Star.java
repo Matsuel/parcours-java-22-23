@@ -3,6 +3,15 @@ import java.util.Objects;
 
 public class Star extends CelestialObject{
     private double magnitude=0.0;
+    private int mass;
+
+    public int getMass() {
+        return mass;
+    }
+
+    public void setMass(int mass) {
+        this.mass = mass;
+    }
 
     public double getMagnitude() {
         return magnitude;
@@ -17,12 +26,13 @@ public class Star extends CelestialObject{
         new CelestialObject();
     }
 
-    public Star(String name, double x, double y, double z, double magnitude) {
+    public Star(String name, double x, double y, double z, double magnitude,int mass) {
         this.name = name;
         this.x = x;
         this.y = y;
         this.z = z;
         this.magnitude=magnitude;
+        this.mass=mass;
     }
 
     public boolean equals(final Star object){

@@ -1,18 +1,31 @@
 import java.text.DecimalFormat;
+import java.util.Optional;
+import java.util.OptionalInt;
 
 public class Planet extends CelestialObject {
     private Star centerStar;
+    private int mass;
+
+
+    public int getMass() {
+        return mass;
+    }
+
+    public void setMass(int mass) {
+        this.mass = mass;
+    }
     
     public Planet(){
         this.centerStar= new Star();
     }
 
-    public Planet(String name, double x, double y , double z,Star centerStar){
+    public Planet(String name, double x, double y , double z,Star centerStar, int mass){
         this.name=name;
         this.x=x;
         this.y=y;
         this.z=z;
-        this.centerStar= new Star(centerStar.getName(), centerStar.getX(), centerStar.getY(), centerStar.getZ(),centerStar.getMagnitude()); 
+        this.mass=mass;
+        this.centerStar= new Star(centerStar.getName(), centerStar.getX(), centerStar.getY(), centerStar.getZ(),centerStar.getMagnitude(),centerStar.getMass()); 
     }
 
     public Star getCenterStar(){
