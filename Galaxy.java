@@ -22,23 +22,27 @@ public class Galaxy {
     public Map<String, Integer> computeMassRepartition(){
         Map <String, Integer> rep= new HashMap<String, Integer>();
         for (CelestialObject object: this.celestialObjects){
+            Integer mass=0;
             if (object instanceof Star){
+                mass=object.getMass();
                 if (rep.containsKey("Star")){
-                    rep.put("Star", rep.get("Star")+object.getMass());
+                    rep.put("Star", rep.get("Star")+mass);
                 }else{
-                    rep.put("Star", object.getMass());
+                    rep.put("Star", mass);
                 }
             }else if (object instanceof Planet){
+                mass=object.getMass();
                 if (rep.containsKey("Planet")){
-                    rep.put("Planet", rep.get("Planet")+object.getMass());
+                    rep.put("Planet", rep.get("Planet")+mass);
                 }else{
-                    rep.put("Planet", object.getMass());
+                    rep.put("Planet", mass);
                 }
             }else{
+                mass=object.getMass();
                 if (rep.containsKey("Other")){
-                    rep.put("Other", rep.get("Other")+object.getMass());
+                    rep.put("Other", rep.get("Other")+mass);
                 }else{
-                    rep.put("Other", object.getMass());
+                    rep.put("Other", mass);
                 }
             }
         }
