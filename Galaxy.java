@@ -25,12 +25,14 @@ public class Galaxy {
             Integer mass=0;
             if (object instanceof Star){
                 mass=object.getMass();
+                rep.put("Star", mass);
                 if (rep.containsKey("Star")){
                     rep.put("Star", rep.get("Star")+mass);
                 }else{
                     rep.put("Star", mass);
                 }
             }else if (object instanceof Planet){
+                rep.put("Star", mass);
                 mass=object.getMass();
                 if (rep.containsKey("Planet")){
                     rep.put("Planet", rep.get("Planet")+mass);
@@ -38,6 +40,7 @@ public class Galaxy {
                     rep.put("Planet", mass);
                 }
             }else{
+                rep.put("Star", mass);
                 mass=object.getMass();
                 if (rep.containsKey("Other")){
                     rep.put("Other", rep.get("Other")+mass);
@@ -45,6 +48,7 @@ public class Galaxy {
                     rep.put("Other", mass);
                 }
             }
+            System.out.println(rep);
         }
         return rep;
     }
