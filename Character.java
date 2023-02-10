@@ -60,7 +60,7 @@ public abstract class Character {
         return rep;
     }
 
-    public static Character fight(Character ch1, Character ch2) throws DeadCharacterException{
+    public static Character fight(Character ch1, Character ch2){
         while( ch1.getCurrentHealth()>=0 && ch2.getCurrentHealth()>=0){
             ch1.attack(ch2);
             if (ch2.getCurrentHealth()==0)return ch1;
