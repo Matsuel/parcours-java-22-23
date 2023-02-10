@@ -23,8 +23,10 @@ public class Monster extends Character {
         int damages=(int)damages_double;
         if (currentHealth-damages<=0){
             currentHealth=0;
+            if(this.currentHealth==0)throw new DeadCharacterException(this);
         }else{
             currentHealth-=damages;
+            if(this.currentHealth==0)throw new DeadCharacterException(this);
         }
     }
 
