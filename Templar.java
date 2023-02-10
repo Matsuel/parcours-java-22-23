@@ -2,7 +2,7 @@ public class Templar extends Character implements Tank, Healer {
     private final int healCapacity;
     private final int shield;
 
-    public Templar(String name, int maxHealth, int healCapacity, int shield, Weapon weapon) throws DeadCharacterException{
+    public Templar(String name, int maxHealth, int healCapacity, int shield, Weapon weapon){
         super(name,maxHealth,weapon);
         this.healCapacity=healCapacity;
         this.shield=shield;
