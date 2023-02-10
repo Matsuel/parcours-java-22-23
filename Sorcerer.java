@@ -1,7 +1,7 @@
 public class Sorcerer extends Character implements Healer {
     private final int healCapacity;
 
-    public Sorcerer(String name, int maxHealth, int healCapacity, Weapon weapon)  {
+    public Sorcerer(String name, int maxHealth, int healCapacity, Weapon weapon) throws DeadCharacterException  {
         super(name, maxHealth, weapon);
         this.healCapacity = healCapacity;
     }
@@ -47,9 +47,11 @@ public class Sorcerer extends Character implements Healer {
     }
 
     @Override
-    public void takeDamage(int n){
+    public void takeDamage(int n) throws DeadCharacterException{
+        if(this.getCurrentHealth()==0)throw new DeadCharacterException(this);
         if (currentHealth-n<=0){
             currentHealth=0;
+            if(this.currentHealth==0)throw new DeadCharacterException(this);
         }else{
             currentHealth-=n;
         }
@@ -57,6 +59,7 @@ public class Sorcerer extends Character implements Healer {
 
     @Override
     public void attack(Character ch) throws DeadCharacterException{
+        if(this.getCurrentHealth()==0)throw new DeadCharacterException(this);
         this.heal(this);
         if (this.getWeapon()!=null){
             ch.takeDamage(this.getWeapon().getDamage());
