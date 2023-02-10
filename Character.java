@@ -41,9 +41,9 @@ public abstract class Character {
         }
     }
 
-    public abstract void takeDamage(int n);
+    public abstract void takeDamage(int n) throws DeadCharacterException;
 
-    public abstract void attack(Character ch);
+    public abstract void attack(Character ch) throws DeadCharacterException;
 
     public static String printStatus(){
         String rep="------------------------------------------\n";
@@ -60,7 +60,7 @@ public abstract class Character {
         return rep;
     }
 
-    public static Character fight(Character ch1, Character ch2){
+    public static Character fight(Character ch1, Character ch2) throws DeadCharacterException{
         while( ch1.getCurrentHealth()>=0 && ch2.getCurrentHealth()>=0){
             ch1.attack(ch2);
             if (ch2.getCurrentHealth()==0)return ch1;

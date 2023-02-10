@@ -1,7 +1,7 @@
 public class Sorcerer extends Character implements Healer {
     private final int healCapacity;
 
-    public Sorcerer(String name, int maxHealth, int healCapacity, Weapon weapon) {
+    public Sorcerer(String name, int maxHealth, int healCapacity, Weapon weapon) throws DeadCharacterException {
         super(name, maxHealth, weapon);
         this.healCapacity = healCapacity;
     }
@@ -56,7 +56,7 @@ public class Sorcerer extends Character implements Healer {
     }
 
     @Override
-    public void attack(Character ch){
+    public void attack(Character ch) throws DeadCharacterException{
         this.heal(this);
         if (this.getWeapon()!=null){
             ch.takeDamage(this.getWeapon().getDamage());
