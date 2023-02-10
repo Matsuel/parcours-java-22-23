@@ -475,29 +475,51 @@
 // }
 
 
+// public class ExerciseRunner {
+
+//     public static void main(String[] args) {
+//         Weapon excalibur = new Weapon("Excalibur", 7);
+//         Weapon baton = new Weapon("Baton", 3);
+//         Templar arthur = new Templar("Arthur", 30, 5, 3, excalibur);
+//         Sorcerer merlin = new Sorcerer("Merlin", 28, 2, baton);
+
+//         try {
+//             arthur.takeDamage(50);
+//         } catch (DeadCharacterException e) {
+//             System.out.println(e.getMessage());
+//         }
+
+//         try {
+//             arthur.takeDamage(2);
+//         } catch (DeadCharacterException e) {
+//             System.out.println(e.getMessage());
+//         }
+//         try {
+//             arthur.attack(merlin);
+//         } catch (DeadCharacterException e) {
+//             System.out.println(e.getMessage());
+//         }
+//     }
+// }
+
+import java.util.List;
+
 public class ExerciseRunner {
 
     public static void main(String[] args) {
-        Weapon excalibur = new Weapon("Excalibur", 7);
-        Weapon baton = new Weapon("Baton", 3);
-        Templar arthur = new Templar("Arthur", 30, 5, 3, excalibur);
-        Sorcerer merlin = new Sorcerer("Merlin", 28, 2, baton);
-
-        try {
-            arthur.takeDamage(50);
-        } catch (DeadCharacterException e) {
-            System.out.println(e.getMessage());
-        }
-
-        try {
-            arthur.takeDamage(2);
-        } catch (DeadCharacterException e) {
-            System.out.println(e.getMessage());
-        }
-        try {
-            arthur.attack(merlin);
-        } catch (DeadCharacterException e) {
-            System.out.println(e.getMessage());
+        Galaxy galaxy = new Galaxy();
+        CelestialObject lune = new CelestialObject("Lune", -123.12, 392.238, 32.31);
+        Star betelgeuse = new Star("Betelgeuse", 128.23, -12.82, 32.328, 1289.3);
+        Planet naboo = new Planet("Naboo", 17.4389, 8349.1, 8943.92, betelgeuse);
+        
+        galaxy.addCelestialObject(lune);
+        galaxy.addCelestialObject(betelgeuse);
+        galaxy.addCelestialObject(naboo);
+        
+        List<CelestialObject> celestialObjects = galaxy.getCelestialObjects();
+        
+        for (CelestialObject celestialObject : celestialObjects) {
+            System.out.println(celestialObject.toString());
         }
     }
 }
