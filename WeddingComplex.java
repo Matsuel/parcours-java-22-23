@@ -9,9 +9,12 @@ public class WeddingComplex {
             System.out.println(name);
             for(String values : first.get(name)){
                 for (int i=0; i<name.length();i++){
-                    if (name.charAt(i)== values.charAt(i)){
+                    if(i<values.length() && name.charAt(i)== values.charAt(i)){
                         rep.put(name, values);
                     }
+                    // if (name.charAt(i)== values.charAt(i)){
+                    //     rep.put(name, values);
+                    // }
                 }
             }
         }
