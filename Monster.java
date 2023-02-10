@@ -1,6 +1,6 @@
 public class Monster extends Character {
     
-    public Monster(String name, int maxHealth, Weapon weapon) {
+    public Monster(String name, int maxHealth, Weapon weapon) throws DeadCharacterException {
         super(name, maxHealth, weapon);
     }
 
