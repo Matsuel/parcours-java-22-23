@@ -18,21 +18,14 @@ public class Monster extends Character {
     
     @Override
     public void takeDamage(int n) throws DeadCharacterException{
+        if (this.getCurrentHealth()==0)throw new DeadCharacterException(this);
         double damages_double= n*0.8;
         int damages=(int)damages_double;
-        if (this.getCurrentHealth()==getMaxHealth()){
-            if (currentHealth-damages<=0){
-                currentHealth=0;
-            }else{
-                currentHealth-=damages;
-            }
-        }if (currentHealth-damages<=0){
+        if (currentHealth-damages<=0){
             currentHealth=0;
         }else{
             currentHealth-=damages;
         }
-        if (this.getCurrentHealth()==0)throw new DeadCharacterException(this);
-        
     }
 
     @Override
