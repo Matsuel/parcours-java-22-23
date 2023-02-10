@@ -1,6 +1,6 @@
 public class DeadCharacterException extends Exception {
     public Character ch;
-    DeadCharacterException(Character ch){
+    public DeadCharacterException(Character ch){
         super();
         this.ch=ch;
     }
