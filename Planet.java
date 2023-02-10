@@ -35,4 +35,9 @@ public class Planet extends CelestialObject {
         Planet obj= (Planet)object;
         return obj.getX()==this.getX() && obj.getY()==this.getY() && obj.getZ()==this.getZ() && obj.getName()==this.getName() && obj.centerStar.getName()== this.centerStar.getName() && obj.centerStar.getX()== this.centerStar.getX()&& obj.centerStar.getY()==this.centerStar.getY() && obj.centerStar.getZ()==this.centerStar.getZ();
     }
+
+    @Override
+    public int hashCode(){
+        return (int)Math.round(this.getName().hashCode()+this.getX()*KM_IN_ONE_AU+this.getY()*KM_IN_ONE_AU+this.getZ()*KM_IN_ONE_AU+this.centerStar.getName().hashCode()+this.centerStar.getX()*KM_IN_ONE_AU+this.centerStar.getY()*KM_IN_ONE_AU+this.centerStar.getZ()*KM_IN_ONE_AU);
+    }
 }
